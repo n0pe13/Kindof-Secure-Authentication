@@ -48,7 +48,7 @@ class Login:
     def __init__(self):
         self.user_entry = None
 
-    def verify(self):
+    def verify_user(self):
         attempts = 3
         self.user_entry = input("\nUsername: ")
         pass_entry = getpass.getpass(prompt="Password: ", stream=None)
@@ -81,7 +81,7 @@ def main():
 
     options = input("\nWould you like to login [1] or register [2]? ")
     if options == '1':
-        existing.verify()
+        existing.verify_user()
     elif options == '2':
         new.add_user()
         new.add_pass()
