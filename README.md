@@ -1,6 +1,6 @@
 Using bcrypt-sha256 to hash passwords. Bcrypt by itself is considered durable with the only limitation of truncating passwords if the password goes over a certain length. Running the password through the sha256 algorithm before using bcrypt mitigates this deficiency.
 
-Credentials are stored in a plain text file in the format {user}:{hashed password}. In `secret.txt`, each user (`test`...`test4`) has a password of `P@ssword1!`. As you can see the hash is completely different from the next.
+Credentials are stored in a text file in the format {username}:{$type$version,rounds$salt$digest}. In `secret.txt`, each user (`test`...`test4`) has a password of `P@ssword1!`. As you can see the hash is completely different from the next.
 
 **Example Outputs:**
 
