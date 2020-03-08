@@ -71,9 +71,9 @@ Password:
 [-] Goodbye
 ```
 
-**Installation (Linux):**
+**Installation:**
 
-This was made with python 3.6.9
+This was made with python 3.6.9 in Ubuntu 18.04 LTS
 
 1) `cd` into a new directory and do `virtualenv env`
 2) `source env/bin/activate`
