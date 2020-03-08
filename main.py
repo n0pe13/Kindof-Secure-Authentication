@@ -65,7 +65,7 @@ class Login:
                     if bcrypt_sha256.verify(self.pass_entry, value):
                         print(f"\n[+] Welcome {self.user_entry}!")
                         return True    
-                    elif not bcrypt_sha256.verify(self.pass_entry, value):
+                    elif not bcrypt_sha256.verify(self.pass_entry, value) or self.user_entry not in key:
                         while attempts > 0:
                             print("[-] Invalid Username or Password")
                             self.user_entry = input("Username: ")
