@@ -70,3 +70,12 @@ Username: test
 Password: 
 [-] Goodbye
 ```
+
+**Installation (Linux):**
+This was made with python 3.6.9
+
+1) `cd` into a new directory and do `virtualenv env`
+2) `source env/bin/activate`
+3) `git clone https://github.com/n0pe13/kindof-Secure-Authentication.git`
+4) `cd kindof-Secure-Authentication`
+5) `pip install -r requirements.txt`
