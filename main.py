@@ -68,6 +68,7 @@ class Login:
                             attempts -= 1
                             if attempts < 0:
                                 print("[-] Too Many Password Attempts. Goodbye.")
+                                exit(0)
                             if bcrypt_sha256.verify(pass_entry, value):
                                 print(f"\n[+] Welcome {self.user_entry}!")
                                 return True    
