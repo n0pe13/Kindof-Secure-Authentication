@@ -72,6 +72,7 @@ Password:
 ```
 
 **Installation (Linux):**
+
 This was made with python 3.6.9
 
 1) `cd` into a new directory and do `virtualenv env`
