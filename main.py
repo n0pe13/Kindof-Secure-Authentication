@@ -22,9 +22,7 @@ class Register:
                         self.username = input("Username: ")
                         if self.username != key:
                             return self.username
-                        else:
-                            continue
-                        break
+                        
             f.close()
 
 
@@ -34,7 +32,6 @@ class Register:
             password = getpass.getpass(prompt="Password: ", stream=None)
             if re.search(r"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,20}$", password) is None:
                 print("[-] Password Does Not Meet Requirements")
-                continue
             else:
                 self.hashed = bcrypt_sha256.using(rounds=12).hash(password)
                 print("\n[+] Account Created!")
@@ -70,13 +67,10 @@ class Login:
                             self.pass_entry = getpass.getpass(prompt="Password: ", stream=None)
                             attempts -= 1
                             if attempts < 0:
-                                print("[-] Goodbye")
-                            else:
-                                continue
+                                print("[-] Too Many Password Attempts. Goodbye.")
                             if bcrypt_sha256.verify(pass_entry, value):
                                 print(f"\n[+] Welcome {self.user_entry}!")
-                                return True
-                            break
+                                return True    
             f.close()
 
 
