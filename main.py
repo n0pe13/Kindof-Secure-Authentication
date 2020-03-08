@@ -57,7 +57,7 @@ class Login:
             for line in f:
                 if line.strip():
                     key, value = [x.strip() for x in line.strip().split(':', 1)]
-                    if bcrypt_sha256.verify(pass_entry, value):
+                    if bcrypt_sha256.verify(pass_entry, value) and self.user_entry in key:
                         print(f"\n[+] Welcome {self.user_entry}!")
                         return True    
                     elif not bcrypt_sha256.verify(pass_entry, value) or self.user_entry not in key:
